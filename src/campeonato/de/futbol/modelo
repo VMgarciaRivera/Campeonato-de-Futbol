@@ -1,0 +1,204 @@
+@startuml
+class Campeonato{
+  String nombre;
+  String liga;
+  agregarEquipo(e: Equipo): void
+  programarPartido(p: Partido): void
+  obtenerTablaPosiciones(): List<Equipo>
+}
+
+class Equipo{
+  String nombre;
+  String pais;
+  Int puntos;
+  Int golesAFavor;
+  Int golesEnContra;
+  agregarJugador(j: Jugador): void
+  asignarDirectorTecnico(dt: DirectorTecnico): void
+  actualizarEstadisticas(gf: int, gc: int): void
+}
+
+class Jugador{
+  String nombre;
+  Int numero;
+  String posicion;
+  Int goles;
+  Int asistencias;
+  Int tarjetasAmarillas;
+  Int tarjetasRojas;
+  Boolean lesionado;
+  registrarGol(): void
+  registrarAsistencia(): void
+  recibirTarjeta(color: String):
+  marcarLesionado(): void
+}
+
+class DirectorTecnico{
+  String nombre;
+  String nacionalidad;
+  Int experiencia;
+  String estrategiaActual;
+  cambiarEstrategia(estrategia: String): void
+  darInstrucciones(): void 
+}
+
+class PersonalLogistico{
+  String nombre;
+  String rol;
+  String especialidad;
+  asignarTarea(tarea: String): void
+  mostrarInformacion(): void 
+}
+
+class Partido{
+  String fecha;
+  String hora;
+  String estadio;
+  String equipoLocal;
+  String equipoVisitante;
+  String golesLocal;
+  String golesVisitante;
+  String arbitroPrincipal;
+  List<String> arbitroAsistentes;
+  Int ronda;
+  registrarGol(equipo: String): void
+  asignarArbitros(principal: String, asistentes: List<String>): void
+  finalizarPartido(): void  
+}
+
+class Estadio{
+  String nombre;
+  String pais;
+  String ciudad;
+  String direccion;
+  Int capacidadMaxima;
+  String estado;
+  String descripcion;
+  Int cantidadPartidosJugados;
+  registrarPartido(): void
+  actualizarEstado(nuevoEstado: String): void
+}
+
+class Arbitro{
+  String nombre;
+  String nacionalidad;
+  String rol;
+  Int experiencia;
+  asignarRol(rol: String): void
+  mostrarInformacion(): void
+}
+
+class Premio{
+  String titulo;
+  String descripcion;
+  String tipo;
+  String jugadorGanador;
+  asignarGanador(nombre: String): void
+  mostrarPremio(): String  
+}
+
+class EventoPartido{
+  Int minuto
+  String tipo;
+  String descripcion;
+  String jugadorInvolucrado;
+  String equipo;
+  registrarEvento(): void
+  mostrarDetalle(): String 
+}
+
+class EstadisticaJugador{
+  String jugador;
+  Int partidosJugados;
+  Int goles;
+  Int asistencias;
+  Int tarjetasAmarillas;
+  Int tarjetasRojas;
+  Int minutosJugados;
+  Int regatesExitosos;
+  Int tirosAlArco;
+  actualizarEstadisticas(): void
+  mostrarResumen(): String   
+}
+
+class EstadisticaEquipo{
+  String equipo;
+  Int partidosJugados;
+  Int golesAFavor;
+  Int golesEnContra;
+  Double posesionPromedio;
+  Int tirosTotales;
+  Int faltasCometidas;
+  Int faltasRecibidas;
+  Int pasesCompletados;
+  Int tarjetasTotales;
+  actualizarEstadisticas(): void
+  mostrarResumen(): String
+}
+
+class Lesion{
+  String jugador;
+  String tipo;
+  String fecha;
+  String partidoOcurrido;
+  Int duracionEstimada;
+  registrarLesion(): void
+  mostrarDetalle(): String 
+}
+
+class Sancion{
+  String jugador;
+  String tipo;
+  String motivo;
+  String partido;
+  String suspendidoHasta;
+  aplicarSancion(): void
+  mostrarDetalle(): String
+}
+
+class CambioTactico{
+  String equipo;
+  Int minuto;
+  String tipo;
+  String descripcion;
+  String partido;
+  registrarCambio(): void
+  mostrarCambio(): String      
+}
+
+Campeonato "1.." -- "*" Equipo : contiene
+Campeonato "1.." -- "*" Partido : contiene
+Campeonato "1.." -- "*" Premio : contiene
+
+Equipo "1.." -- "*" Jugador : tiene
+Equipo "1" -- "1" DirectorTecnico : tiene
+Equipo "0.." -- "*" PersonalLogistico : tiene
+Equipo "1" -- "1" EstadisticaEquipo : tiene
+Equipo "0.." -- "*" CambioTactico : tiene
+
+Jugador "1" -- "1" EstadisticaJugador : tiene 
+Jugador "0.." -- "*" Lesion : puede tener
+Jugador "0.." -- "*" Sancion : puede tener
+Jugador "0.." -- "*" EventoPartido : participa en
+
+Partido "1" -- "2" Equipo : involucra
+Partido "1" -- "1" Estadio : se juega
+Partido "1" -- "*" Arbitro : tiene
+Partido "0.." -- "*" EventoPartido : tiene
+Partido "0.." -- "*" CambioTactico : registra
+
+Estadio "0.." -- "*" Partido : usado
+
+EventoPartido "1" -- "1" Partido : se asocia a
+EventoPartido "1" -- "1" Jugador : involucra a
+EventoPartido "1" -- "1" Equipo : involucra a
+
+Lesion "1" -- "1" Jugador : pertenece a
+Lesion "1" -- "1" Partido : se produce en
+
+Sancion "1" -- "1" Jugador : pertenece a
+Sancion "1" -- "1" Partido : se produce en
+
+CambioTactico "1" -- "1" Equipo : pertenece a
+CambioTactico "1" -- "1" Partido : ocurre en
+
