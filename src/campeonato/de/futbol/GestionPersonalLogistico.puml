@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+:Administrador: as Admin
+
+Admin --> (Registrar personal logístico)
+
+Admin --> (Asignar personal a equipo)
+
+Admin --> (Consultar personal)
+
+Admin --> (Editar personal)
+
+Admin --> (Eliminar personal)
+@enduml

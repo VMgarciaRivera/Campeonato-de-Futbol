@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+:Administrador: as Admin
+
+Admin --> (Programar partido)
+
+Admin --> (Consultar partidos)
+
+Admin --> (Registrar goles en partido)
+
+Admin --> (Mostrar resultado de partido)
+
+Admin --> (Eliminar partido)
+@enduml

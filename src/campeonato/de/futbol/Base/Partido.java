@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class Partido {
 
+    private int id;
     private String fecha;
     private String hora;
     private String estadio;
@@ -25,8 +26,9 @@ public class Partido {
     private int golesLocal;
     private int golesVisitante;
 
-    public Partido(String fecha, String hora, String estadio, int ronda,
+    public Partido(int id, String fecha, String hora, String estadio, int ronda,
             Equipo equipoLocal, Equipo equipoVisitante, Arbitro arbitro) {
+        this.id = id;
         this.fecha = fecha;
         this.hora = hora;
         this.estadio = estadio;
@@ -57,6 +59,14 @@ public class Partido {
 
     public String getEstadio() {
         return estadio;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getRonda() {

@@ -10,10 +10,20 @@ package campeonato.de.futbol.Base;
  */
 public class DirectorTecnico extends PersonaPremiable {
     private int experiencia; // años
+    private int id;
 
-    public DirectorTecnico(String nombre, String nacionalidad, int experiencia) {
+    public DirectorTecnico(int id, String nombre, String nacionalidad, int experiencia) {
         super(nombre, nacionalidad);
+        this.id = id;
         this.experiencia = experiencia;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

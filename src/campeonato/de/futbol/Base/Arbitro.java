@@ -9,14 +9,24 @@ package campeonato.de.futbol.Base;
  * @author BCpollito
  */
 public class Arbitro {
+    private int id;
     private String nombre;
     private String nacionalidad;
-    private String rol; // Ej: Principal, Asistente, VAR
+    private String rol;
 
-    public Arbitro(String nombre, String nacionalidad, String rol) {
+    public Arbitro(int id, String nombre, String nacionalidad, String rol) {
+        this.id = id;
         this.nombre = nombre;
         this.nacionalidad = nacionalidad;
         this.rol = rol;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -33,5 +43,17 @@ public class Arbitro {
 
     public void mostrarInformacion() {
         System.out.println("Árbitro: " + nombre + " | Nacionalidad: " + nacionalidad + " | Rol: " + rol);
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 }

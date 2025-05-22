@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+:Administrador: as Admin
+
+Admin --> (Registrar director técnico)
+
+Admin --> (Asignar DT a equipo)
+
+Admin --> (Consultar directores técnicos)
+
+Admin --> (Editar DT)
+
+Admin --> (Eliminar DT)
+@enduml

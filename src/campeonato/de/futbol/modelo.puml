@@ -166,6 +166,7 @@ class CambioTactico{
   mostrarCambio(): String      
 }
 
+
 Campeonato "1.." -- "*" Equipo : contiene
 Campeonato "1.." -- "*" Partido : contiene
 Campeonato "1.." -- "*" Premio : contiene
@@ -202,3 +203,4 @@ Sancion "1" -- "1" Partido : se produce en
 CambioTactico "1" -- "1" Equipo : pertenece a
 CambioTactico "1" -- "1" Partido : ocurre en
 
+@enduml

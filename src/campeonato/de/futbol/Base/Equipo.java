@@ -8,6 +8,7 @@ import java.util.List;
 public class Equipo {
 
     private String nombre, pais;
+    private int id;
     private int puntos;
     private int golesAFavor;
     private int golesEnContra;
@@ -15,7 +16,8 @@ public class Equipo {
     private List<Jugador> jugadores;
     private List<PersonalLogistico> personalLogistico;
 
-    public Equipo(String nombre, String pais) {
+    public Equipo(int id, String nombre, String pais) {
+        this.id = id;
         this.nombre = nombre;
         this.pais = pais;
         this.jugadores = new ArrayList<>();
@@ -23,6 +25,14 @@ public class Equipo {
         this.puntos = 0;
         this.golesAFavor = 0;
         this.golesEnContra = 0;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
      public void setDirectorTecnico(DirectorTecnico dt) {
@@ -60,6 +70,14 @@ public class Equipo {
     
     public DirectorTecnico getDirectorTecnico() {
         return directorTecnico;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 
     public List<Jugador> getJugadores() {

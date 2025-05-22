@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+:Administrador: as Admin
+
+Admin --> (Registrar árbitro)
+
+Admin --> (Asignar árbitro a partido)
+
+Admin --> (Consultar árbitros)
+
+Admin --> (Editar árbitro)
+
+Admin --> (Eliminar árbitro)
+@enduml

@@ -9,13 +9,23 @@ package campeonato.de.futbol.Base;
  * @author BCpollito
  */
 public class Jugador extends PersonaPremiable {
+    private int id;
     private int numeroCamiseta;
     private String posicion;
 
-    public Jugador(String nombre, String nacionalidad, int numeroCamiseta, String posicion) {
+    public Jugador(int id, String nombre, String nacionalidad, int numeroCamiseta, String posicion) {
         super(nombre, nacionalidad);
+        this.id = id;
         this.numeroCamiseta = numeroCamiseta;
         this.posicion = posicion;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
@@ -23,7 +33,6 @@ public class Jugador extends PersonaPremiable {
         return "Jugador";
     }
 
-    // Getters adicionales
     public int getNumeroCamiseta() {
         return numeroCamiseta;
     }

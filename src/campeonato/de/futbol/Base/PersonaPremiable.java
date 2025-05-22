@@ -17,6 +17,14 @@ public abstract class PersonaPremiable {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+
     public String getNacionalidad() {
         return nacionalidad;
     }

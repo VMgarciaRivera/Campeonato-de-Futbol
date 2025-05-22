@@ -24,7 +24,7 @@ public class Campeonato {
         this.premios = new ArrayList<>();
     }
 
-    // Métodos para agregar elementos relacionados
+    
     public void agregarEquipo(Equipo equipo) {
         equipos.add(equipo);
     }

@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+:Administrador: as Admin
+
+Admin --> (Registrar jugador)
+
+Admin --> (Asignar jugador a equipo)
+
+Admin --> (Consultar jugadores)
+
+Admin --> (Editar jugador)
+
+Admin --> (Eliminar jugador)
+@enduml

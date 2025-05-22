@@ -1,0 +1,7 @@
+@startuml
+left to right direction
+:Administrador: as Admin
+
+Admin --> (Crear Campeonato)
+Admin --> (Consultar informacion del campeonato) 
+@enduml

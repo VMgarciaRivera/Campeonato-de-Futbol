@@ -1,0 +1,9 @@
+@startuml
+left to right direction
+:Administrador: as Admin
+
+Admin --> (Registrar equipo)
+Admin --> (Consultar equipos)
+Admin --> (Editar equipo)
+Admin --> (Eliminar Equipo)
+@enduml
