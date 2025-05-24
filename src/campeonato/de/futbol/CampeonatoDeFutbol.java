@@ -1,13 +1,9 @@
 package campeonato.de.futbol;
 
 import campeonato.de.futbol.Base.Arbitro;
-import campeonato.de.futbol.Base.Campeonato;
 import campeonato.de.futbol.Base.DirectorTecnico;
 import campeonato.de.futbol.Base.Equipo;
 import campeonato.de.futbol.Base.Jugador;
-import campeonato.de.futbol.Base.Partido;
-import campeonato.de.futbol.Base.PersonalLogistico;
-import campeonato.de.futbol.Base.Premio;
 import campeonato_de_futbol_crud.ArbitroCrud;
 import campeonato_de_futbol_crud.EquipoCrud;
 import campeonato_de_futbol_crud.JugadorCrud;

@@ -3,9 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/BCpollito/Documents/NetBeansProjects/Campeonato%20de%20futbol/src/campeonato/de/futbol/CampeonatoDeFutbol.java</file>
-            <file>file:/C:/Users/BCpollito/Documents/NetBeansProjects/Campeonato%20de%20futbol/src/campeonato_de_futbol_crud/JugadorCrud.java</file>
-            <file>file:/C:/Users/BCpollito/Documents/NetBeansProjects/Campeonato%20de%20futbol/src/campeonato_de_futbol_crud/EquipoCrud.java</file>
+            <file>file:/C:/Users/BCpollito/Documents/NetBeansProjects/Campeonato%20de%20futbol/src/campeonato_de_futbol_crud/DirectorTecnicoCrud.java</file>
+            <file>file:/C:/Users/BCpollito/Documents/NetBeansProjects/Campeonato%20de%20futbol/src/campeonato/de/futbol/Base/DirectorTecnico.java</file>
         </group>
     </open-files>
 </project-private>

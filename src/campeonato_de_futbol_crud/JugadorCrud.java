@@ -13,7 +13,7 @@ public class JugadorCrud {
     private Map<Integer, Jugador> jugadores = new HashMap<>();
 
     // Agregar jugador El id puede ser la cedula 
-    public void agregar(int id,String nombre, String nacionalidad, int numero, String posicion) throws Exception{
+    public void agregar(int id, String nombre, String nacionalidad, int numero, String posicion) throws Exception{
         if (jugadores.containsKey(id)) {
             throw new Exception("El jugador con el id: "+ id +". Ya Existe");
         }

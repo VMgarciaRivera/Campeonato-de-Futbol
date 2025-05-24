@@ -60,7 +60,6 @@ public class PartidoCrud {
         }
         Partido partido = partidos.get(idPartido);
         partido.mostrarResultado();
-        System.out.println("No se encontro el partido.");
     }
 
     // Eliminar partido
